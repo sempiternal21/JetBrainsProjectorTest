@@ -31,8 +31,8 @@ public class ClickToJavaClass {
 
         Actions action = new Actions(getWebDriver());
 
-        action.moveToElement(elementBody, -300, 43).click().build().perform();
-        action.moveToElement(elementBody, 50, 100).click().build().perform();
+        action.moveToElement(elementBody, -300, 43).click().build().perform(); // кликаем на окно java файла
+        action.moveToElement(elementBody, 50, 100).click().build().perform(); // кликаем в область кода
 
         action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
         action.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).build().perform();

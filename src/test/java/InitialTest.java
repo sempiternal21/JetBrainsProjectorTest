@@ -32,8 +32,8 @@ public class InitialTest {
 
         Actions action = new Actions(getWebDriver());
 
-        action.moveToElement(ele, -180, 43).click().build().perform();
-        action.moveToElement(ele, 50, 100).click().build().perform();
+        action.moveToElement(ele, -180, 43).click().build().perform(); // кликаем на окно kotlin файла
+        action.moveToElement(ele, 50, 100).click().build().perform(); // кликаем в область кода
 
         action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
         action.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).build().perform();

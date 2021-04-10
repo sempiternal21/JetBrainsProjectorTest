@@ -32,12 +32,12 @@ public class CompilationTest {
                 """;
 
         Actions action = new Actions(getWebDriver());
-        action.moveToElement(ele, -180, 43).click().build().perform();
+        action.moveToElement(ele, -180, 43).click().build().perform(); // кликаем на окно kotlin файла
 
         action.keyDown(Keys.SHIFT).sendKeys(Keys.F10).keyUp(Keys.SHIFT).build().perform();
         TimeUnit.SECONDS.sleep(3);
 
-        action.moveToElement(ele, 400, 600).click().build().perform();
+        action.moveToElement(ele, 400, 600).click().build().perform();  //кликаем в область вывода
 
         action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
         action.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).build().perform();
