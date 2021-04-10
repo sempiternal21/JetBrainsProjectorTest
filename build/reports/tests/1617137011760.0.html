@@ -1,0 +1,53 @@
+<html><head>
+  <title>DemoProject [~/DemoProject] - .../src/KotlinObject.kt - IntelliJ IDEA</title>
+  <meta charset="UTF-8">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link href="manifest.webmanifest" rel="manifest">
+
+  <script src="https://cdn.jsdelivr.net/pako/1.0.3/pako.min.js"></script>
+  <script>
+    // Disable caching for some scripts (described here: https://stackoverflow.com/questions/118884/how-to-force-the-browser-to-reload-cached-css-js-files):
+    const timestamp = Math.floor(Date.now());
+    const notCachableScripts = [
+      "projector-client-web.js",
+    ];
+
+    notCachableScripts.forEach((script) => document.write(
+        '<script src="' +
+        script +
+        '?v=' +
+        timestamp +
+        '" type="text/javascript"><\/script>'
+    ));
+
+    function onLoad() {
+      if (window['projector-client-web']) {
+        window['projector-client-web'].org.jetbrains.projector.client.web.onLoad();
+      }
+      else {
+        alert("Can't find window['projector-client-web']... Maybe the deployment is broken and there is no JS.");
+      }
+    }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+          .register('/projector-client/serviceworker.js')
+          .then(
+              function () {
+                console.log('Service Worker registered');
+              },
+              function (e) {
+                console.log('Service Worker registration failed', e);
+              },
+          );
+    }
+  </script><script src="projector-client-web.js?v=1617137006107" type="text/javascript"></script>
+<link href="pj.svg" rel="shortcut icon" type="image/x-icon"></head>
+
+<body onload="onLoad()" style="background-color: rgb(34, 136, 34); overscroll-behavior-y: none; touch-action: none;" class="notSelectable">
+
+
+<div id="reloading-message-layer" style="position: absolute; z-index: 1; margin: 0px; width: 100%; height: 100%; top: 0px; left: 0px; pointer-events: none;"></div><canvas width="410" height="28" style="display: none; position: fixed; cursor: default; border-radius: 8px 8px 0px 0px; border-top: 1px solid rgb(213, 213, 213); border-left: 1px solid rgb(213, 213, 213); border-right: 1px solid rgb(213, 213, 213); left: 472.5px; top: 269.5px; width: 410px; height: 28px; z-index: 567;"></canvas><canvas class="window" width="1357" height="656" style="position: fixed; display: block; left: 0px; top: 0px; width: 1357px; height: 656px; border: none; cursor: text; z-index: -10; font-variant-ligatures: none;"></canvas><canvas style="display: block; position: fixed; cursor: default; border-radius: 8px; left: -8px; top: -8px; width: 1373px; height: 672px; z-index: -11;"></canvas><canvas style="display: block; position: fixed; box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 8px; background-color: transparent; border-radius: 8px; left: 0px; top: 0px; width: 1357px; height: 656px; z-index: -12;"></canvas></body></html>
